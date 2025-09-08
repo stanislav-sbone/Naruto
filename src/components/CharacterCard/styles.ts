@@ -12,9 +12,9 @@ export interface IProps {
 export const Card = styled.div`
 	display: flex;
 	gap: 100px;
-	margin-bottom: 50px;
 	padding: 20px;
 	cursor: pointer;
+	border-radius: 8px;
 	transition: all 0.4s ease;
 
 	&:hover {
