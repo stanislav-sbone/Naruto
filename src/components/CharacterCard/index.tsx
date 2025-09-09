@@ -10,9 +10,9 @@ interface IProps {
 
 const CharacterCard: FC<IProps> = ({ character }) => {
   const characterInfo = [
-    ['Birthday', character.birthdate],
-    ['Clan', character.clan],
-    ['Anime Debut', character.debut],
+    ['День рождения', character.birthdate],
+    ['Клан', character.clan],
+    ['Дебют в аниме', character.debut],
   ];
 
   return (

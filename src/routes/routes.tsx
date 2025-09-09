@@ -1,11 +1,14 @@
+import type { FC } from 'react';
 import { Route, Routes } from 'react-router';
 import Home from '../pages/Home';
 import About from '../pages/About';
+import Character from '../pages/Character';
 
-const AppRoutes = () => {
+const AppRoutes: FC = () => {
   const navigationRoutes = [
     { path: '/', element: <Home /> },
     { path: '/about', element: <About /> },
+    { path: 'character/:param', element: <Character /> },
   ];
   return (
     <Routes>

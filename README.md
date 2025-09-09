@@ -6,12 +6,13 @@
 - Фильтрация персонажей по инпуту
 - Пагинация списка персонажей
 - Роутинг страниц
+- Отдельные страницы карточек персонажей
 
 ## Технологии
 
 - React
 - Typescript
-- React Router
 - styled-components
+- React Router
 - AntDesign (взял иконки)
 - Pre-commit hook (Husky + lint-staged)

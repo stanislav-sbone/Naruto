@@ -8,14 +8,14 @@ export const Container = styled.div`
     margin: 2rem 0;
 `
 
-export const PageButton = styled.button<{ isCurrentPage: boolean; }>`
+export const PageButton = styled.button<{ $isCurrentPage: boolean; }>`
     padding: 8px 12px;
-    border: 1px solid ${(props) => (props.isCurrentPage ? "orange" : "#c6c6c6")};
+    border: 1px solid ${({$isCurrentPage}) => ($isCurrentPage ? "orange" : "#c6c6c6")};
     border-radius: 8px;
     font-size: 18px;
     font-weight: 600;
     color: white;
-    background-color: ${(props) => (props.isCurrentPage ? "orange" : "transparent")};
+    background-color: ${({$isCurrentPage}) => ($isCurrentPage ? "orange" : "transparent")};
 `
 
 export const ArrowButton = styled.button`

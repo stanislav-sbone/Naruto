@@ -8,7 +8,7 @@ interface IProps {
 const Abilities: FC<IProps> = ({ jutsu }) => {
   return (
     <Container>
-      <Title>Abilities</Title>
+      <Title>Способности</Title>
       <Information>
         {jutsu.map((jutsu) => (
           <Ability key={jutsu}>{jutsu}</Ability>

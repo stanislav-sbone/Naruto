@@ -6,6 +6,7 @@ import { List } from './styles';
 import NotFound from '../NotFound';
 import Loading from '../Loading';
 import Pagination from '../Pagination';
+import { Link } from 'react-router';
 
 interface IProps {
   search: string;
@@ -70,8 +71,10 @@ const CharactersList: FC<IProps> = ({ search }) => {
     <>
       <List>
         {currentCharacters.map((c) => (
-          <CharacterCard key={c.id} character={c} />
-        ))}{' '}
+          <Link key={c.id} to={`/character/${c.id}`}>
+            <CharacterCard character={c} />
+          </Link>
+        ))}
       </List>
       {filteredCharacters.length > 5 && (
         <Pagination

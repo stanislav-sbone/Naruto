@@ -1,3 +1,14 @@
+export interface IFamily {
+  father?: string;
+  mother?: string;
+  son?: string;
+  daughter?: string;
+  wife?: string;
+"adoptive son"?: string;
+  godfather?: string;
+  [key: string]: string | undefined;
+}
+
 export interface IResponse {
     id: string
     name: string
@@ -8,6 +19,7 @@ export interface IResponse {
         novel?: string
         game?: string
     }
+    family: IFamily
     jutsu: string[]
     personal: {
         birthdate?: string
@@ -20,7 +32,8 @@ export interface ICharacter {
     name: string,
     image: string | null,
     debut: string | null,
-    jutsu: string[],
+    jutsu?: string[] | null,
     birthdate: string | null,
     clan: string | null,
+    family?: IFamily,
 }

@@ -28,7 +28,7 @@ const Pagination: FC<IProps> = ({
         <PageButton
           key={i + 1}
           onClick={() => handlePageChange(i + 1)}
-          isCurrentPage={currentPage === i + 1}
+          $isCurrentPage={currentPage === i + 1}
         >
           {i + 1}
         </PageButton>
