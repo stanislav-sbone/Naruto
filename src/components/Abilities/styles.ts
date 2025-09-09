@@ -9,7 +9,6 @@ export const Title = styled.div`
 `;
 
 export const Information = styled.div`
-	color: #dfd3d8ff;
 	font-size: 16px;
 	margin-bottom: 15px;
 	display: flex;

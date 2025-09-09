@@ -4,4 +4,5 @@ export const List = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-top: 2rem;
 `

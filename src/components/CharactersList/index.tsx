@@ -5,6 +5,7 @@ import CharacterCard from '../CharacterCard';
 import { List } from './styles';
 import NotFound from '../NotFound';
 import Loading from '../Loading';
+import Pagination from '../Pagination';
 
 interface IProps {
   search: string;
@@ -16,6 +17,17 @@ const CharactersList: FC<IProps> = ({ search }) => {
     ICharacter[] | []
   >([]);
   const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const charactersPerPage = 5;
+  const lastCharacterIndex = currentPage * charactersPerPage;
+  const firstCharacterIndex = lastCharacterIndex - charactersPerPage;
+  const totalPages = Math.ceil(filteredCharacters.length / charactersPerPage);
+
+  const currentCharacters = filteredCharacters.slice(
+    firstCharacterIndex,
+    lastCharacterIndex
+  );
 
   useEffect(() => {
     (async () => {
@@ -37,6 +49,7 @@ const CharactersList: FC<IProps> = ({ search }) => {
         character.name.toLowerCase().includes(search.toLowerCase())
       )
     );
+    setCurrentPage(1);
   }, [characters, search]);
 
   if (loading) {
@@ -47,12 +60,27 @@ const CharactersList: FC<IProps> = ({ search }) => {
     return <NotFound />;
   }
 
+  const handlePageChange = (page: number) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
+
   return (
-    <List>
-      {filteredCharacters.map((c) => (
-        <CharacterCard key={c.id} character={c} />
-      ))}
-    </List>
+    <>
+      <List>
+        {currentCharacters.map((c) => (
+          <CharacterCard key={c.id} character={c} />
+        ))}{' '}
+      </List>
+      {filteredCharacters.length > 5 && (
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          handlePageChange={handlePageChange}
+        />
+      )}
+    </>
   );
 };
 

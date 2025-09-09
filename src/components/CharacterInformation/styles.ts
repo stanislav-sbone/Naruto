@@ -11,7 +11,6 @@ export const Title = styled.div`
 `;
 
 export const Information = styled.div`
-	color: #d3d6dfff;
 	font-size: 16px;
 	margin-bottom: 15px;
 `;

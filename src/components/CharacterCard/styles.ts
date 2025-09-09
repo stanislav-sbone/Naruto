@@ -16,6 +16,7 @@ export const Card = styled.div`
 	cursor: pointer;
 	border-radius: 8px;
 	transition: all 0.4s ease;
+	height: 325px;
 
 	&:hover {
 		transform: scale(1.03);
@@ -24,10 +25,8 @@ export const Card = styled.div`
 `;
 
 export const Image = styled.img`
-	min-width: 300px;
-	max-width: 300px;
-	min-height: 250px;
-	max-height: 300px;
+	width: 300px;
+	height: 250px;
 	border-radius: 14px;
 `;
 
