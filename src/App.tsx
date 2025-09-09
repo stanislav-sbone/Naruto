@@ -1,13 +1,13 @@
 import AppContainer from './components/AppContainer';
 import Header from './components/Header';
-import Home from './pages/Home';
+import AppRoutes from './routes/routes';
 
 function App() {
   return (
     <AppContainer>
       <Header />
       <main>
-        <Home></Home>
+        <AppRoutes />
       </main>
     </AppContainer>
   );

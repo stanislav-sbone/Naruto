@@ -10,6 +10,7 @@ export const HeaderBar = styled.header`
 
 export const Logo = styled.img`
     max-width: 180px;
+    cursor: pointer;
 `
 
 export const Navigation = styled.nav`
@@ -17,7 +18,7 @@ export const Navigation = styled.nav`
     justify-content: space-between;
     column-gap: 5rem;
 `
-export const Link = styled.a`
+export const Link = styled.button`
     transition: color 0.4s ease;
 
     &:hover {
