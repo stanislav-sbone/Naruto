@@ -12,9 +12,9 @@ const Header: FC = () => {
     <HeaderBar>
       <Logo src="/logo.png" alt="naruto" onClick={() => navigate('/')} />
       <Navigation>
-        <Link onClick={() => navigate('/')}>Персонажи</Link>
+        <Link onClick={() => navigate('/')}>Главные герои</Link>
+        <Link onClick={() => navigate('/tailed-beasts')}>Хвостатые звери</Link>
         <Link onClick={() => navigate('/about')}>Об аниме</Link>
-        <Link>Еще что нибудь</Link>
       </Navigation>
       <Switch
         checked={theme === 'light'}

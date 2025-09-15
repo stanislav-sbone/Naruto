@@ -1,1 +1,1 @@
-export const URL = 'https://dattebayo-api.onrender.com/characters'
+export const URL = 'https://dattebayo-api.onrender.com'

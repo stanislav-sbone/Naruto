@@ -1,10 +1,11 @@
 import axios from "axios"
 import { URL } from "../constants"
 import type { ICharacter, IResponse } from "../types/character"
+import type { IBeast, IBeastResponse } from "../types/beast"
 
 export const getAllCharacters = async () => {
     try {
-        const response = await axios.get<{ characters: IResponse[] }>(`${URL}`)
+        const response = await axios.get<{ characters: IResponse[] }>(`${URL}/characters`)
 
         const characters: ICharacter[] = response.data.characters.map(character => ({
             id: character.id,
@@ -24,7 +25,7 @@ export const getAllCharacters = async () => {
 
 export const getCharacterById = async (id: string | undefined) => {
     try {
-        const response = await axios.get<IResponse>(`${URL}/${id}`)
+        const response = await axios.get<IResponse>(`${URL}/characters/${id}`)
         const data = response.data
 
         const character: ICharacter  = {
@@ -45,7 +46,7 @@ export const getCharacterById = async (id: string | undefined) => {
 
 export const getCharacterByName = async (name: string | undefined) => {
     try {
-        const response = await axios.get<{ characters: IResponse[] }>(`${URL}?name=${name}`)
+        const response = await axios.get<{ characters: IResponse[] }>(`${URL}/characters?name=${name}`)
         const data = response.data.characters[0]
 
         const character: ICharacter  = {
@@ -59,6 +60,24 @@ export const getCharacterByName = async (name: string | undefined) => {
             family: data.family ?? {},
         }
         return character
+    } catch (error) {
+        console.error(`Ошибка: ${error}`)
+    }
+}
+
+export const getAllBeasts = async () => {
+    try {
+        const response = await axios.get<{ 'tailed-beasts': IBeastResponse[] }>(`${URL}/tailed-beasts`)
+        const data = response.data['tailed-beasts']
+
+        const beasts: IBeast[] = data.map((beast) => ({
+            id: beast.id,
+            name: beast.name,
+            image: beast.name === 'Kurama' ? 'https://avatars.mds.yandex.net/i?id=730f8d89d38b889918a1be180bae3bd5_l-4876504-images-thumbs&n=13' : beast.images[0],
+            jinchuriki: beast.personal['jinchūriki']
+        }))
+        
+        return beasts
     } catch (error) {
         console.error(`Ошибка: ${error}`)
     }

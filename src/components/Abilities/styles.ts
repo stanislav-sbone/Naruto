@@ -13,7 +13,8 @@ export const Information = styled.div`
 	font-size: 16px;
 	margin-bottom: 15px;
 	display: flex;
-	column-gap: 2rem;
+	flex-wrap: wrap;
+	column-gap: 3rem;
 `;
 
 export const Ability = styled.p`
