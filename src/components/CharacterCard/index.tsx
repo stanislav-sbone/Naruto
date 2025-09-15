@@ -29,7 +29,7 @@ const CharacterCard: FC<IProps> = ({ character }) => {
             />
           ))}
         </Information>
-        <Abilities jutsu={character.jutsu} />
+        <Abilities jutsu={character.jutsu!} />
       </Description>
     </Card>
   );
