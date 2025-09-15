@@ -17,5 +17,5 @@ export const Image = styled.img`
 export const Message = styled.p`
     font-size: 26px;
     font-weight: 600;
-    color: #e99f00;
+    color: #ff8a00;
 `

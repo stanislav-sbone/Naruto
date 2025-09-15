@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import type { AppTheme } from "../../theme";
 
 
 export const Card = styled.div`
@@ -16,7 +17,7 @@ export const Button = styled.button`
     text-decoration: underline;
 
     &:hover {
-        color: orange;
+        color: #ff8a00;
     }
 `
 
@@ -36,8 +37,8 @@ export const Information = styled.div`
     gap: 2.5rem;
 `
 
-export const Name = styled.h3`
-    color: #ebeef5;
+export const Name = styled.h3<{ theme: AppTheme }>`
+    color: ${({ theme }) => theme.name === 'dark' ? '#ebeef5' : '#ff8a00'};
 	font-size: 32px;
 	font-weight: 600;
 	margin-bottom: 20px;
@@ -45,7 +46,8 @@ export const Name = styled.h3`
 
 export const Title = styled.div`
 	font-size: 20px;
-	color: orange;
+    font-weight: 600;
+	color: #ff8a00;
 	margin-bottom: 10px;
 `
 
@@ -64,6 +66,6 @@ export const FamilyMember = styled.span`
     transition: color 0.4s ease-in-out;
 
     &:hover {
-        color: orange
+        color: #ff8a00
     };
 `

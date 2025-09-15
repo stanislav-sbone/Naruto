@@ -7,7 +7,7 @@ const About: FC = () => {
     <div>
       <Title>Об аниме Наруто</Title>
       <Container>
-        <img src="/public/shippuden.jpg" alt="" />
+        <img src="/shippuden.jpg" alt="" />
         <Paragraph>
           <strong>«Наруто»</strong> — масштабная сага, состоящая из двух частей
           («Наруто» и «Наруто: Ураганные хроники»), которая на протяжении более

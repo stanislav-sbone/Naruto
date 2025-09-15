@@ -8,8 +8,6 @@
 
 body {
   min-height: 100vh;
-  color: #c6c6c6;
-  background-color: #252525;
 }
 
 input,
@@ -50,5 +48,4 @@ button:focus {
 
 a {
   text-decoration: none;
-  color: #c6c6c6;;
 }

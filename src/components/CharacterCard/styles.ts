@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import type { AppTheme } from "../../theme";
 
 export interface IProps {
 	name: string;
@@ -9,7 +10,7 @@ export interface IProps {
 	clan: string;
 }
 
-export const Card = styled.div`
+export const Card = styled.div<{ theme: AppTheme }>`
 	display: flex;
 	gap: 100px;
 	padding: 20px;
@@ -19,8 +20,8 @@ export const Card = styled.div`
 	height: 325px;
 
 	&:hover {
-		transform: scale(1.03);
-		box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.2);
+		transform: scale(1.04);
+		box-shadow: ${({ theme }) => theme.name === 'dark' ? '0px 0px 8px 0px rgba(255, 255, 255, 0.2)' : '0px 0px 8px 0px rgba(0, 0, 0, 0.2)'};
 	}
 `;
 
@@ -41,8 +42,8 @@ export const Information = styled.div`
 	gap: 3rem;
 `;
 
-export const Name = styled.div`
-	color: #ebeef5;
+export const Name = styled.div<{ theme: AppTheme }>`
+	color: ${({ theme }) => theme.name === 'dark' ? '#ebeef5' : '#ff8a00'};
 	font-size: 32px;
 	font-weight: 600;
 	margin-bottom: 20px;

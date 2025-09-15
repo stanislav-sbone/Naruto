@@ -10,12 +10,12 @@ export const Search = styled.input`
 	border-radius: 5px;
 	padding: 15px 50px;
 	width: 100%;
-	color: orange;
+	color: #ff8a00;
 	font-size: 20px;
 	background-color: transparent;
 
 	&:focus {
-		border: 1px solid orange;
+		border: 1px solid #ff8a00;
 	}
 `;
 
@@ -23,5 +23,5 @@ export const Clear = styled.button`
     position: absolute;
     top: 20px;
     right: 20px;
-    color: orange;
+    color: #ff8a00;
 `

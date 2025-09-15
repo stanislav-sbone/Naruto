@@ -10,13 +10,13 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-    color: orange;
+    color: #ff8a00;
     font-size: 44px;
     margin-bottom: 1.5rem;
 `
 
 export const Subtitle = styled.h1`
-    color: orange;
+    color: #ff8a00;
     font-size: 30px;
     margin-top: 2rem;
     margin-bottom: 1.5rem;

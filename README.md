@@ -7,6 +7,7 @@
 - Пагинация списка персонажей
 - Роутинг страниц
 - Отдельные страницы карточек персонажей
+- Смена темы через контекст
 
 ## Технологии
 
@@ -14,5 +15,5 @@
 - Typescript
 - styled-components
 - React Router
-- AntDesign (взял иконки)
+- AntDesign
 - Pre-commit hook (Husky + lint-staged)

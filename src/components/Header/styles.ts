@@ -20,8 +20,9 @@ export const Navigation = styled.nav`
 `
 export const Link = styled.button`
     transition: color 0.4s ease;
+    font-weight: 600;
 
     &:hover {
-        color: orange;
+        color: #ff8a00;
     }
 `
